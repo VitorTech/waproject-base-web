@@ -53,7 +53,7 @@ const FormDialog = memo((props: IProps) => {
     onSubmit(model) {
       return orderService.save(model).pipe(
         tap(order => {
-          Toast.show(`${order.id} salvo com sucesso`);
+          Toast.show(`Pedido ${order.id} salvo com sucesso`);
           props.onComplete(order);
         }),
         logError(true)
